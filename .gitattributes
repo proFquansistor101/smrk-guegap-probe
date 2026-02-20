@@ -1,2 +1,41 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# ---------------------------------------
+# SMRK-GUEGAP Probe — Git Attributes
+# ---------------------------------------
+
+# Normalize line endings to LF in repo
+* text=auto eol=lf
+
+# Python source files
+*.py text eol=lf
+
+# JSON artifacts (deterministic, LF enforced)
+*.json text eol=lf
+
+# Markdown / text
+*.md text eol=lf
+*.txt text eol=lf
+
+# CSV scan outputs
+*.csv text eol=lf
+
+# YAML / CFF
+*.yml text eol=lf
+*.yaml text eol=lf
+*.cff text eol=lf
+
+# Shell scripts
+*.sh text eol=lf
+
+# Windows batch files (CRLF allowed)
+*.bat text eol=crlf
+
+# Prevent Git from trying to diff binary artifacts
+*.npy binary
+*.npz binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+
+# Large run outputs (optional future)
+runs/** -diff
