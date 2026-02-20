@@ -1,1 +1,18 @@
 {}
+{
+  "probe_version": "smrk-guegap-v1",
+  "run_params": {
+    "N": 256,
+    "M": 4,
+    "boundary": "cyclic",
+    "theta": {
+      "kappa": 0.05,
+      "lambda": 0.1,
+      "s": 1.0,
+      "t": 0.0,
+      "eta": 0.5,
+      "alpha": 0.6180339887,
+      "phi_offsets": [0.0, 1.0, 2.0, 3.0]
+    }
+  }
+}
