@@ -1,1 +1,98 @@
-{}
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://101researchgroup.org/smrk-guegap/input_schema_v1.json",
+  "title": "SMRK-GUEGAP Probe Input Schema v1",
+  "type": "object",
+  "required": [
+    "probe_version",
+    "operator_variant",
+    "run_params"
+  ],
+  "properties": {
+    "probe_version": {
+      "type": "string"
+    },
+    "operator_variant": {
+      "type": "string"
+    },
+    "run_params": {
+      "type": "object",
+      "required": [
+        "N",
+        "M",
+        "boundary",
+        "theta"
+      ],
+      "properties": {
+        "N": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 4096
+        },
+        "M": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 32
+        },
+        "boundary": {
+          "type": "string",
+          "enum": ["cyclic", "dirichlet"]
+        },
+        "bulk_window": {
+          "type": "object",
+          "properties": {
+            "beta0": { "type": "number" },
+            "beta1": { "type": "number" }
+          }
+        },
+        "k_min": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "theta": {
+          "type": "object",
+          "required": [
+            "kappa",
+            "lambda",
+            "s",
+            "t",
+            "eta",
+            "alpha",
+            "phi_offsets"
+          ],
+          "properties": {
+            "kappa": { "type": "number" },
+            "lambda": { "type": "number" },
+            "mu": { "type": "number" },
+            "s": { "type": "number" },
+            "t": { "type": "number" },
+            "eta": { "type": "number" },
+            "alpha": { "type": "number" },
+            "phase_delta": { "type": "number" },
+            "phi_offsets": {
+              "type": "array",
+              "items": { "type": "number" }
+            }
+          }
+        },
+        "quantize": {
+          "type": "boolean"
+        },
+        "quantize_rule": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "scan": {
+      "type": "object"
+    },
+    "build": {
+      "type": "object"
+    },
+    "platform": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}
