@@ -1,1 +1,72 @@
-{}
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://101researchgroup.org/smrk-guegap/output_schema_v1.json",
+  "title": "SMRK-GUEGAP Probe Output Schema v1",
+  "type": "object",
+  "required": [
+    "probe_version",
+    "run_id",
+    "status",
+    "results",
+    "commit_hash"
+  ],
+  "properties": {
+    "probe_version": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "status": {
+      "type": "string"
+    },
+    "results": {
+      "type": "object",
+      "required": [
+        "gap",
+        "bulk_r"
+      ],
+      "properties": {
+        "eigs_low": {
+          "type": "array",
+          "items": { "type": "number" }
+        },
+        "gap": {
+          "type": "object",
+          "properties": {
+            "delta1": { "type": "number" },
+            "deltak": {
+              "type": ["number", "null"]
+            }
+          }
+        },
+        "bulk_r": {
+          "type": "object",
+          "properties": {
+            "r_mean": { "type": "number" },
+            "count": { "type": "integer" }
+          }
+        },
+        "acceptance": {
+          "type": "object"
+        }
+      }
+    },
+    "diagnostics": {
+      "type": "object"
+    },
+    "build": {
+      "type": "object"
+    },
+    "platform": {
+      "type": "object"
+    },
+    "commit_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": false
+}
