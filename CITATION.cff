@@ -1,1 +1,30 @@
 cff-version: 1.2.0
+title: "SMRK-GUEGAP Probe"
+message: "If you use this software or its results, please cite it as described below."
+type: software
+
+authors:
+  - family-names: Smrčka
+    given-names: Roman
+    affiliation: 101 Research Group
+
+version: 1.0.0
+date-released: 2026-02-20
+license: Apache-2.0
+
+repository-code: "https://github.com/101researchgroup/smrk-guegap-probe"
+
+abstract: >
+  SMRK-GUEGAP Probe is a deterministic numerical framework designed to test
+  whether arithmetic SMRK-style operator families can simultaneously exhibit
+  GUE-like bulk spectral statistics and stable low-energy spectral gaps.
+  The system emphasizes reproducibility, canonical JSON hashing, and
+  audit-friendly dense diagonalization protocols.
+
+keywords:
+  - random matrix theory
+  - GUE
+  - spectral gap
+  - Yang-Mills
+  - deterministic operators
+  - SMRK
