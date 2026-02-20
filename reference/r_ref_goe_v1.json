@@ -1,6 +1,5 @@
-{}
 {
-  "name": "r_ref_poisson_v1",
+  "name": "r_ref_goe_v1",
   "kind": "spacing_ratio",
   "B": 50,
   "domain": [0.0, 1.0],
@@ -12,6 +11,6 @@
     0.8, 0.82, 0.84, 0.86, 0.88, 0.9, 0.92, 0.94, 0.96, 0.98,
     1.0
   ],
-  "reference_mean_r": 0.386,
-  "description": "Analytical Poisson spacing ratio distribution"
+  "reference_mean_r": 0.531,
+  "description": "GOE spacing ratio reference (mean-based classification, v1)"
 }
