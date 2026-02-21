@@ -43,6 +43,6 @@ All hypotheses are explicitly falsifiable.
 ## Installation
 
 ```bash
-git clone https://github.com/101researchgroup/smrk-guegap-probe.git
-cd smrk-guegap-probe
+git clone https://github.com/101researchgroup/smrk-guegap-probe-v1.git
+cd smrk-guegap-probe-v1
 pip install -r requirements.txt
