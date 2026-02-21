@@ -1,7 +1,7 @@
-# SMRK-GUEGAP Probe
+# SMRK-GUEGAP Probe - v1
 
 Repository scaffold.
-# SMRK-GUEGAP Probe
+# SMRK-GUEGAP Probe - v1
 
 **Spectral Probe for the Twistor–SMRK Framework for Yang–Mills Mass Gap**
 
